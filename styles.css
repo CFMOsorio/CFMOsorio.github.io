@@ -57,7 +57,11 @@ header {
     max-width: 300px; /* Ajusta el ancho máximo según el diseño */
     font-size: 0.9em;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    background-color: #030303fb; /* Gradiente dorado oscuro */
+    -webkit-background-clip: text; /* Aplica el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+    background-clip: text; /* Para navegadores que soportan esta propiedad */
+    text-decoration: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
@@ -148,13 +152,17 @@ footer a {
         position: relative;
         top: auto;
         right: auto;
-        max-width: none; /* Ajusta el ancho máximo para dispositivos móviles */
+        max-width: 95%;
         width: 100%;
-        font-size: 0.8em; /* Ajusta el tamaño de la fuente en móviles */
+        font-size: 0.8em;
         margin: 10px 0;
-        text-align: center; /* Centra el texto en dispositivos móviles */
-        background-color: rgba(0, 0, 0, 0.6); /* Fondo más oscuro en móviles */
-    }
+        text-align: center;
+        background-color: #030303fb; /* Gradiente dorado oscuro */
+        -webkit-background-clip: text; /* Aplica el gradiente al texto */
+        -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+        background-clip: text; /* Para navegadores que soportan esta propiedad */
+        text-decoration: none;
+        }
 
     main {
         flex-direction: column;
