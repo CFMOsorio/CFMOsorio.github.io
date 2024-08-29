@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
 }
 
 /* Estilo del header */
@@ -15,59 +16,64 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    position: relative; /* Permite alinear contenido absoluto dentro del header */
-    border-radius: 0 0 10px 10px; /* Bordes redondeados sutiles en la parte inferior */
-    margin-bottom: -10px; /* Compensa el redondeo en el body */
-}
-
-/* Logo */
-.logo {
-    flex-shrink: 0; /* Evita que el logo se reduzca */
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: -10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el header */
 }
 
 .logo img {
-    max-width: 100px; /* Ajusta según el tamaño de tu logo */
+    max-width: 100px;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* Contenido del header */
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
 .header-content {
     display: flex;
     flex-direction: column;
     flex: 1;
     margin-left: 20px;
+    position: relative;
 }
 
-/* Título del header */
 .header-content h1 {
     font-family: "Dancing Script", cursive;
     font-size: 4em;
     margin: 0;
-    background: linear-gradient(45deg, #B8860B, #DAA520, #FFD700); /* Gradiente dorado oscuro */
-    -webkit-background-clip: text; /* Aplica el gradiente al texto */
-    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    background-clip: text; /* Para navegadores que soportan esta propiedad */
+    background: linear-gradient(45deg, #B8860B, #DAA520, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Misión */
+.header-content h1:hover {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+
 .mission {
     position: absolute;
     top: 10px;
     right: 20px;
-    max-width: 300px; /* Ajusta el ancho máximo según el diseño */
+    max-width: 300px;
     font-size: 0.9em;
     color: #fff;
-    background-color: #030303fb; /* Gradiente dorado oscuro */
-    -webkit-background-clip: text; /* Aplica el gradiente al texto */
-    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    background-clip: text; /* Para navegadores que soportan esta propiedad */
-    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Estilo del main */
+.mission:hover {
+    transform: translateY(-5px);
+}
+
 main {
     flex: 1;
     padding: 20px;
@@ -84,12 +90,23 @@ main {
     padding: 20px;
     width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .producto img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.1);
 }
 
 .producto h2 {
@@ -117,25 +134,24 @@ main {
     background-color: #128C7E;
 }
 
-/* Estilo del footer */
 footer {
     background: linear-gradient(135deg, #D3D3D3, #B0B0B0 70%, #D6A8E1);
     color: #fff;
     text-align: center;
     padding: 10px 20px;
-    border-radius: 10px 10px 0 0; /* Bordes redondeados sutiles en la parte superior */
-    margin-top: -10px; /* Compensa el redondeo en el body */
+    border-radius: 10px 10px 0 0;
+    margin-top: -10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el footer */
 }
 
 footer a {
-    background: linear-gradient(45deg, #B8860B, #DAA520, #FFD700); /* Gradiente dorado oscuro */
-    -webkit-background-clip: text; /* Aplica el gradiente al texto */
-    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-    background-clip: text; /* Para navegadores que soportan esta propiedad */
+    background: linear-gradient(45deg, #B8860B, #DAA520, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-decoration: none;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -157,12 +173,7 @@ footer a {
         font-size: 0.8em;
         margin: 10px 0;
         text-align: center;
-        background-color: #030303fb; /* Gradiente dorado oscuro */
-        -webkit-background-clip: text; /* Aplica el gradiente al texto */
-        -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el gradiente */
-        background-clip: text; /* Para navegadores que soportan esta propiedad */
-        text-decoration: none;
-        }
+    }
 
     main {
         flex-direction: column;
