@@ -3816,6 +3816,45 @@ textarea.form-control-lg {
   align-items: center;
 }
 
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px; /* Espacio a la izquierda de cada elemento */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Color del texto */
+  background-color: #1d1d1db5; /* Fondo oscuro */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #1d1d1db5; /* Color de fondo al pasar el cursor por encima */
+  color: #8f672e; /* Color del texto al pasar el cursor por encima */
+}
+
+@media (max-width: 991.98px) {
+ 
+  
+  .navbar-nav .nav-link {
+      color: #ffffff; /* Cambia el color del texto a blanco */
+      margin-bottom: 10px; /* Espacio entre los elementos en el menú desplegable */
+  }
+  
+  .navbar-nav .nav-link:hover {
+      color: #8f672e; /* Color al pasar el cursor por encima */
+  }
+}
+
+.card-text {
+  text-align: justify; /* Justificar el texto */
+  /* Opcional: Ajusta el espaciado entre palabras */
+  text-justify: inter-word;
+}
+
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
@@ -4240,6 +4279,12 @@ textarea.form-control-lg {
   background-color: var(--bs-card-cap-bg);
   border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
+
+.card-footer {
+  border-top: none; /* Elimina el borde superior del card-footer */
+}
+
+
 .card-footer:last-child {
   border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
 }
@@ -11014,11 +11059,13 @@ footer.footer .social-link:hover {
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding-top: 8rem;
   padding-bottom: 8rem;
   /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/fondohome.jpg"); */
-  background: linear-gradient(to bottom, #FAD0C4, #FAD0C4, #FAD0C4, #A18CD1, #FBC2EB);
+  /* background: linear-gradient(to bottom, #FAD0C4, #FAD0C4, #FAD0C4, #FAD0F9, #A18CC0, #A18CD9); */
+  background: linear-gradient(to bottom right, #FAD0C4 0%, #FAD0C4 25%, #FAD0F9 50%, #A18CC0 75%, #A18CD9 100%);
+
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11136,4 +11183,25 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+  position: relative; /* Necesario para posicionar el precio dentro de la imagen */
+}
+
+.card-img-top {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+}
+
+.card-price {
+  position: absolute;
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+  background-color: transparent; /* Fondo transparente */
+  color: #000; /* Color blanco para el texto del precio */
+  padding: 5px 10px; /* Espaciado alrededor del precio */
+  border-radius: 5px; /* Bordes redondeados para el precio */
+  font-size: 1.25rem; /* Tamaño del texto del precio */
+  font-weight: bold; /* Negrita para el precio */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto de tarjeta */
 }
